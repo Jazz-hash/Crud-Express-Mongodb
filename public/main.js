@@ -21,11 +21,12 @@ const deleteButton = document.querySelector("#delete-button");
 const messageDiv = document.querySelector("#message");
 
 deleteButton.addEventListener("click", (_) => {
+  quote = deleteButton.getAttribute("quoteId");
   fetch("/quotes", {
     method: "delete",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: "Darth Vadar",
+      name: quote,
     }),
   })
     .then((res) => {

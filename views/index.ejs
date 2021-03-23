@@ -26,10 +26,11 @@
             <!-- Output quote from the iterated quote object -->
             <span>
                 <%= quotes[i].quote %>
+                <!-- <%= quotes[i]._id %> -->
             </span>
             <span>
-                 <button id="update">Update</button>
-                 <button id="delete-button">Delete</button>
+                 <button id="update" quoteId="<%= quotes[i].name %>">Update</button>
+                 <button id="delete" quoteId="<%= quotes[i].name %>">Delete</button>
             </span>
         </li>
         <% } %>
@@ -49,7 +50,7 @@
         Delete one Darth Vadar's quote. Does nothing if there are no more Darth
         Vadar's quote
     </p>
-    <!-- <button id="delete-button">Delete Darth Vadar's quote</button> -->
+    <button id="delete-button" quoteId="Darth Vadar"">Delete Darth Vadar's quote</button>
 <div id="message"></div>
 
 </div>
